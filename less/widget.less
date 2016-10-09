@@ -1,0 +1,77 @@
+
+/* g-topBar */
+
+.g-header{
+    position: relative; min-width: 1200px; height: 49px; background: #252525;
+}
+
+/* m-nav */
+.m-nav{ float: left; 
+    .logo{ width: 113px; height: 36px; margin: 5px 0 0 10px; background: url('../img/frame-icon.png'); cursor: pointer;}
+    .logo,.list{ float: left; }
+    .list{ margin-left: 25px;
+        >*, .skyDriver .item{ float: left; height: 100%; width: 90px; }
+        >*{
+            &.active, &:hover{ color: #fff; background: #0f0f0f; }
+        }
+        .skyDriver{ 
+            &.active, &:hover{background: #F6F6F9;
+                .item{ color: #000; }
+                .u-frameIcon{ background-position: -89px -55px;}
+            }
+            
+        }
+    }
+    .item{ color: #d8d8d8; line-height: 48px; font-weight: bold; font-size: 18px; text-align: center;
+    }
+    .skyDriver{ position: relative;
+        &:hover .dropDown{ display: block;}
+        .item{ width: 100%;  }
+        >i{ position: absolute; right: 5px; top: 17px;}
+        .dropDown{ display: none; position: absolute; top: 48px; left: -80px; z-index: 999; width: 66*9px; padding: 10px; background: #f6f6f9; color: #333; border-radius: 3px; border: 1px solid #afafaf; border-top: none; box-shadow: 0, 2px 4px rgba(0,0,0,.2);
+            a{ float: left; width: 66px; height: 66px; text-align: center; padding-top: 10px; border-radius: 3px; cursor: pointer;
+                i{display: block; margin: 0 auto; margin-bottom: 4px; }
+            }
+            a:hover{ background: #E0E1E5; }
+            
+        }
+        
+    }
+}
+
+/* end m-nav */
+/* m-info */
+.m-info{ float: right; height: 100%; line-height: 49px; font-size: 12px;
+    li{float: left; margin-right: 20px; color: #d8d8d8;}
+    .sale{ color: #e15f00; margin-right: 10px;
+        a:hover{ text-decoration: underline; }
+    }
+    .moreSpace{
+        a{ margin-right: 5px; }
+        >*{ float: left; }
+        progress{ width: 100px; }
+    }
+    .fileSearch{ width: 155px;
+        form{ margin-top: 13px; width: 100%; height: 22px; border-radius: 4px; overflow: hidden;}
+        input{ float: left; height: 100%; border: none; outline: none;}
+        .keyWord{ padding-left: 5px; width: 120px;}
+        .btn{ width: 30px; background: #eee; font-size: 10px; cursor: pointer;}
+    }
+    .user{
+        >*{float: left;}
+        i{margin: 14px 5px 0;}
+        >em{ margin: 17px 5px 0;}
+    }
+    .vipLink{
+        a{ display: block; width: 68px; height: 26px; margin-top: 11px; line-height: 28px; text-align: center; border-radius: 2px; background: #E52E26;}
+    }
+    .download{
+        a:hover{text-decoration: underline;}
+    }
+    .more{
+        >*{ float: left; }
+        >em{ margin: 17px 5px 0; }
+    }
+}
+
+/* end m-info */

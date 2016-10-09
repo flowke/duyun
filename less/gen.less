@@ -1,0 +1,132 @@
+@import 'variable.less';
+@import 'widget.less';
+
+/* css reset */
+body,p,h1,h2,h3,h4,h5,h6,dl,dd,form,select{margin:0;}
+ol,ul{list-style:none; padding:0; margin:0;}
+a{text-decoration:none; color: inherit;}
+img{border:none; vertical-align:top;}
+em,i,{font-style:normal;}
+strong{font-weight:normal;}
+table{border-collapse:collapse;}
+th,td{padding:0;}
+input{margin:0; padding:0;}
+textarea{margin:0; padding:0; resize:none; overflow:auto; outline:none;}
+
+body{font:normal 14px Helvetica, "Microsoft YaHei"; line-height:1;}
+p{line-height:1.6667;}
+
+/* end css reset */
+
+/* function*/
+.f-clear:after{ content:"";display:block;clear:both; }
+.f-clear{ *zoom:1 }
+
+.f-inlineBlock{ display: inline-block; *zoom:1; *display: inline; }
+.f-omit::after{ content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 5px;    background-color: inherit;}
+/*end function*/
+
+
+/* Unit */
+.u-frameIcon{ .icon; background: url('../img/frame-icon.png') no-repeat;
+    &.arrowUp{ width: 12px; height: 12px; background-position: -89px -55px;}
+    &.arrowDown{ width: 12px; height: 12px; background-position: -89px -45px;}
+    &.memberPrice{ width: 16px; height: 16px; background-position: -183px -3px;}
+    &.shareDy{ height: 20px; width: 20px; background-position: 0 -48px;}
+    &.share{ height: 20px; width: 20px; background-position: 0 -68px;}
+    &.inform{ height: 20px; width: 20px; background-position: 0 -108px;}
+}
+/* u-feedIcon*/
+.u-fileIcon{ .icon; background: url('@{feedIcon}/sprite_icon_small.png') no-repeat;
+    &.fold{ width: 16px; height: 13px; background-position: -272px 0; }
+    &.movie{ width: 16px; height: 15px; background-position: -136px 0; }
+}
+.u-feedIcon{ .icon; width: 22px; height: 22px; background: url("@{feedIcon}/feed_icon.png") no-repeat;
+    &.album{ background-position: 0 -130px;}
+    &.pic{ background-position: -30px -130px;}
+    &.movie{ background-position: -60px -130px;}
+    &.file{ background-position: 0 -190px;}
+    &.music{ background-position: -30px -190px;}
+    &.other{ background-position: -60px -190px;}
+    &.more{ width: 30px; height: 5px; background-position: -10px -50px;}
+    &.thumb{ width: 18px; height: 18px; background-position: -60px -49px;}
+}
+.u-holderIcon{ .icon; background: url('../img/feedicon.png') no-repeat;
+    &.music{ width: 370px; height: 64px; background-position: -399px -96px;}
+}
+.u-navigator{ .icon; width: 23px; height: 22px; background: url('../img/navigator.png') no-repeat;
+    &.pic{ background-position: 0 -22px;}
+    &.file{ background-position: 0 -44px;}
+    &.movie{ background-position: 0 -89px;}
+    &.bt{ background-position: 0 -201px;}
+    &.music{ background-position: 0 -66px;}
+    &.other{ background-position: 0 -177px;}
+    &.trash{ background-position: 0 -150px;}
+    &.share{ background-position: 0 -131px;}
+}
+
+.u-appIcon{ .icon; width:22px; height: 22px; background: url('../img/aside-app-icon.png');
+    &.disk{}
+    &.address{ background-position: 0 -21px;}
+    &.record{ background-position: 0 -295px;}
+    &.msg{background-position: 0 -109px;}
+    &.article{background-position: 0 -242px;}
+    &.nodepad{background-position: 0 -88px;}
+    &.findBack{background-position: 0 -132px;}
+    &.live{background-position: 0 -153px;}
+    &.enterprise{background-position: 0 -322px;}
+}
+.u-dropdownMenu{.icon; width:35px; height: 38px; background: url('../img/dropdown_menu.png') no-repeat;
+    &.disk{}
+    &.address{background-position: -35px 0;}
+    &.record{background-position: -350px 0;}
+    &.msg{background-position: -315px 0;}
+    &.nodepad{background-position: -140px 0;}
+    &.findBack{background-position: -210px 0;}
+    &.live{background-position: -245px 0;}
+    &.enterprise{background-position: -385px 0;}
+}
+.u-icoMsg{.icon; width: 20px; height: 20px; background: url('../img/ico-message.png') no-repeat;
+    &.newFolder{background-position: 0 -550px;}
+    &.download{ background-position: 0 -358px;}
+    &.moveTo{ background-position: 0 -455px;}
+    &.rename{ background-position: 0 -518px;}
+    &.delete{ background-position: 0 -326px;}
+    &.tree{ height: 26px; background-position: 0 -1087px;}
+    &.sort{ width: 18px; height: 18px; background-position: 0 -999px;}
+    &.time{ width: 18px; height: 18px; background-position: 0 -1064px;}
+    &.letter{ width: 18px; height: 18px; background-position: 0 -1031px;}
+}
+.u-icoCheck{.icon; background: url('../img/checkbox_8c741da.png') no-repeat;
+    &.sDisCheck{ width: 14px; height: 14px;}
+    &.sCheck{ width: 14px; height: 14px;}
+    &.bDisCheck{height: 30px; width: 30px; background-position: 0 -36px;}
+    &.bCheck{ height: 30px; width: 30px; background-position: -30px -36px;}
+
+}
+.u-plugIcon{ .icon; width: 20px; height: 24px; background: url('../img/plugin-icon_7318e47.png') no-repeat;
+    &.iShare{  background-position: -180px 0;}
+    &.iDownloadOffline{ }
+}
+.u-sysIcon{ .icon; width: 20px; height: 24px; background: url('../img/sys-icon_b547193.png') no-repeat;
+    &.iNewFolder{background-position: -150px 0;}
+    &.iDownload{width: 18px; background-position: -60px 0;}
+    &.iDelete{width: 16px; background-position: -210px 0;}
+}
+.u-checkIcon{.icon; background: url('../img/ico.png') no-repeat;
+    &.bDisCheck{ width: 30px; height: 30px; background-position: 0 -370px;}
+    &.bChecked{ width: 30px; height: 30px; background-position: 0 -420px;}
+}
+.u-fileBg{.icon; background: url('../img/file.png') no-repeat;
+    &.iFolder{ width: 64px; height: 64px; background-position: 0 -2px;}
+}
+
+/*end u-feedIcon*/
+
+
+
+
+
+
+
+/* end Unit */

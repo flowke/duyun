@@ -1,0 +1,140 @@
+doctype html
+include ./widget.jade
+html
+    head
+        title yunpan
+        link(rel="stylesheet", href="less/cloudDriver.less")
+    body
+        .g-header.f-clear
+            +mainNav
+            .m-info
+                ul
+                    li.sale
+                        a(href="#") 超级会员 限时优惠
+                    li.fileSearch
+                        form(action="#")
+                            input.keyWord(type="text")
+                            input.btn(type="submit", value="搜索")
+                    li.user
+                        i.u-frameIcon.memberPrice
+                        span 字母花花
+                        em.u-frameIcon.arrowDown
+                    li.vipLink
+                        a(href="https://yun.baidu.com/buy/center?tag=1&from=homepage") 会员中心
+                    li.download 
+                        a(href="https://pan.baidu.com/download?from=header#pan") 客户端下载
+                    li.inform 通知
+                    li.more 
+                        span 更多
+                        em.u-frameIcon.arrowDown
+        .g-bd
+            .m-side
+                ul.menu
+                    each val, indx in [['全部文件','u-navigator allFile'],['图片','u-navigator pic'],['文档','u-navigator file'],['视频','u-navigator movie'],['种子','u-navigator bt'],['音乐','u-navigator music'],['其他','u-navigator other']]
+                        if indx === 0
+                            li.it.active
+                                a(href="#")
+                                    i(class=val[1])
+                                    =val[0]
+                        else
+                            li.it
+                                a(href="#")
+                                    i(class=val[1])
+                                    =val[0]
+                .sepLine
+                .it.shareTo
+                    a(href="#")
+                        i.u-navigator.share
+                        |我的分享
+                .sepLine
+                .it.toTrash
+                    a(href="#")
+                        i.u-navigator.trash
+                        |回收站
+            .g-main
+                .m-toolBar.f-clear
+                    .fl
+                        .upload.it
+                            input(type="file")
+                            .btnInner
+                                a.btn(href="#")
+                                    i +
+                                    span 上传
+                                .dropDown
+                                    a(href="#") 文件
+                                    a(href="#") 文件夹
+                        .newFolder.it
+                            a(href="#")
+                                i.u-sysIcon.iNewFolder
+                                |新建文件夹
+                        .downloadOffline.it
+                            a(href="#")
+                                i.u-plugIcon.iDownloadOffline
+                                |离线下载
+                    .fr
+                        .it.showTree
+                            i.u-icoMsg.tree
+                        .it.sort
+                            .cover
+                                i.u-icoMsg.sort
+                            ul
+                                li 
+                                    i.u-icoMsg.time
+                                    |按时间
+                                li
+                                    i.u-icoMsg.letter
+                                    |按字母
+                                li 
+                                    i.u-icoMsg.sort
+                                    |显示缩略图
+                .m-crumbs.f-clear
+                    ul.fl
+                        li.back
+                            a(href="#") 返回上一级
+                            //- i.f-inlineBlock |
+                        li
+                            a(href="#") php
+                            i &gt;
+                            a(href="#") hh
+                            i &gt;
+                            span nnn
+                .m-fileOperate
+                    ul.f-clear
+                        li.check
+                            i.u-icoCheck.sDisCheck
+                        li 已经选中1个文件／文件夹
+                        li.btn
+                            a(href="#")
+                                i.u-plugIcon.iShare
+                                |分享
+                        li.btn
+                            a(href="#")
+                                i.u-sysIcon.iDownload
+                                |下载
+                        li.btn
+                            a(href="#")
+                                i.u-sysIcon.iDelete
+                                |删除
+                        li.btn
+                            a(href="#") 重命名
+                        li.btn
+                            a(href="#") 复制到
+                        li.btn
+                            a(href="#") 移动到
+                .g-fileBd
+                    .g-fileWrap
+                        .m-fileStage.f-clear
+                            -var i=0
+                            while i++<20
+                                .item
+                                    .elemWrap
+                                        .picWrap
+                                            i.u-fileBg.iFolder
+                                        i.u-checkIcon.bDisCheck
+                                        p 全部的都
+
+
+
+    
+
+

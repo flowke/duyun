@@ -1,0 +1,126 @@
+@import 'gen';
+/* g-bd*/
+.g-bd{ position: absolute; top: 49px; bottom: 0; width: 100%; background: #ededf0;
+
+}
+/* end g-bd*/
+
+/* m-menu*/
+.m-side{ position: absolute; left: 0; top: 0; height: 100%; width: 209px; border-right: 1px solid #c6c8cc; background: #f0f0f0;
+    .menu{ padding-top: 10px; 
+    }
+    .it{ font-size: 14px; padding-bottom: 5px; line-height: 31px; color: #999; text-indent: 35px;
+        i{ margin-right: 10px;}
+        a{display: block; height: 100%;}
+        &.active, &:hover{
+            a{ background: #e6e6e6; color: #666; font-weight: bold;} 
+            i{
+                &.allFile{ background-position:-23px 0;}
+                &.pic{ background-position: -23px -22px;}
+                &.file{ background-position: -23px -44px;}
+                &.movie{ background-position: -23px -89px;}
+                &.bt{ background-position: -23px -201px;}
+                &.music{ background-position: -23px -66px;}
+                &.other{ background-position: -23px -177px;}
+                &.share{ background-position: -23px -150px;}
+                &.trash{ background-position: -23px -131px;}
+            }
+        }
+    }
+    .sepLine{ margin: 5px 0; border-top: 1px solid #dce1e6; border-bottom: 1px solid #f7f9fb;}
+}
+/* end m-menu*/
+
+/* g-main*/
+.g-main{ position: relative; height: 100%; margin-left: 210px; background: #fff;}
+/* end g-main*/
+
+/* m-toolBar*/
+.m-toolBar{ min-width: 550px; padding: 13px 12px; border: 1px solid #eff1f5; border-bottom: 1px solid #c8ccd5; background: #f5f6f9; 
+    .fl{float: left;}
+    .fr{float: right;
+        .it{ height: 34px; width: 48px; padding: 0; margin: 0;}
+    }
+    .it{float: left; height: 36px; margin-right: 10px; padding: 0 18px; border: 1px solid #c7c9cf; background: #fff; color: #505254; text-align: center; cursor: pointer;
+        a{ display: block; line-height: 36px; font-size: 13px; }
+        i{margin: -2px 5px 0 0;}
+        &:hover{
+            i.iNewFolder{background-position: -180px 0;}
+            i.iDownloadOffline{ background-position: -30px 0;}
+        }
+    }
+    .upload{ position: relative; width: 130px; background: #3091f2; border: 1px solid #288cef; padding: 0;
+        input{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;}
+        a{display: block; text-align: center; line-height: 36px; color: #fff;}
+        i{ font-size: 18px;margin-right: 6px;}
+        &:hover .dropDown{ display: block;}
+        .dropDown{ display: none; width: 100%; margin-left: -1px; margin-top: -2px; background: #fff; border: 1px solid #c8ccd5; box-shadow: 0 1px 5px rgba(0,0,0,.1); font-size: 14px;
+            a{ padding: 5px 0 5px 17px; border-bottom: 1px solid #e6e7ec; line-height: 22px; text-align: left; color: #666;
+                &:hover{ background: #f3f8ff;}
+            }
+        }
+
+    }
+    .sort{ position: relative; zindex: 1; left: -1px; cursor: pointer;
+        .cover{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #fff; z-index: 1;
+            i{margin-top: 9px;}
+        }
+        &:hover ul{ display: block;}
+        ul{ display: none; position: absolute; right: -1px; top: 33px; z-index: 0; width: 150px; background: #fff; border: 1px solid #c8ccd5; box-shadow: 0 1px 5px rgba(0,0,0,.1); font-size: 14px; line-height: 28px; text-align: left; text-indent: 12px;
+            li{
+                &:hover{ background: #f3f8ff;}
+            }
+            i{vertical-align: middle; margin-right: 6px;}
+        }
+    }
+}
+/* end m-toolBar*/
+/* m-crumbs*/
+.m-crumbs{ height: 30px; padding-left: 13px; font-size: 12px; line-height: 30px; color: #666;
+    .fl{float: left;
+        li{float: left; margin-right: 4px;}
+        .back a{ border-right: 1.5px solid #999; }
+    }
+    a,span{padding: 0 5px;}
+    // a,i{vertical-align: middle;}
+    
+}
+/*end m-crumbs*/
+/* m-fileOperate*/
+.m-fileOperate{ min-width: 880px; height: 41px; padding-left: 13px; background: #f7f7f7; border: 1px solid #d2d2d2; border-left: none; border-radius: 2px; color: #888; line-height: 41px; font-size: 12px;
+    ul, li{height: 41px;}
+    ul>li{ float: left; margin-right: 10px;}
+    .check{ width: 28px;margin: 0;
+    }
+    .btn{  height: 26px; margin-top: 6px; padding: 0 12px; border: 1px solid #c7c9cf; line-height: 26px; background: #fff; cursor: pointer;
+        i{margin-right: 5px;}
+        &:hover .iDownload{background-position: -120px 0;}
+        &:hover .iShare{background-position: -240px 0;}
+        &:hover .iDelete{background-position: -270px 0;}
+    }
+    .iShare{margin-top: -3px;}
+    .iDelete{margin-top: -3px;}
+}
+/*end m-fileOperate*/
+
+/*g-fileBd*/
+.g-fileBd{ position: absolute; top: 139px; bottom: 0; left: 0; width: 100%;}
+/*end g-fileBd*/
+/*m-fileStage*/
+.m-fileStage{ margin: 10px 0 0 10px;
+    .item{ float: left; width: 120px; height: 125px; margin: 0 10px 0px 0; overflow: hidden;}
+    .elemWrap{ position: relative; padding-bottom: 5px; border: 1px solid transparent; cursor: pointer;
+        &:hover { border: 1px solid #c3d8f0; background: #e9f3fd;
+            .bDisCheck{display: block;}
+        }
+        .picWrap{ text-align: center; margin: 10px 0 0 0;}
+        .bDisCheck{ display: none; position: absolute; left: -1px; top: -1px;}
+        p{ position: relative; margin: 0 5px; text-align: center; font-size: 12px; max-height: 36px; line-height: 18px; overflow: hidden; background-color: inherit;
+        }
+    }
+}
+/* end m-fileStage*/
+
+
+
+

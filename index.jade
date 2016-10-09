@@ -1,0 +1,179 @@
+doctype html
+include ./widget.jade
+html
+    head
+        title duyun
+        link(href='less/index.less', rel='stylesheet')
+
+    body
+        .g-header.f-clear
+            +mainNav
+            .m-info
+                ul
+                    li.sale
+                        a(href="#") 超级会员 限时优惠
+                    li.moreSpace
+                        a(href="#") 扩容
+                        div
+                            progress(max=100, value=70)
+                            div.f-displayHide
+                                <span>2565G</span>/<span>3177G</span>
+                    li.user
+                        span 字母花花
+                        em.u-frameIcon.arrowDown
+                    li.vipLink 
+                        a(href="https://yun.baidu.com/buy/center?tag=1&from=homepage") 会员中心
+                    li.download 
+                        a(href="https://pan.baidu.com/download?from=header#pan") 客户端下载
+                    li.inform 通知
+                    li.more 
+                        span 更多
+                        em.u-frameIcon.arrowDown
+        .g-bd
+            .m-side
+                ul.pageEntry
+                    each val, indx in [['分享动态','u-frameIcon shareDy'],['我的分享','u-frameIcon share'],['通知','u-frameIcon inform']]
+                        li
+                            a(href="#")
+                                i(class=val[1])
+                                =val[0]
+                .sideSeprator
+                ul.appEntry
+                    each val in [['网盘','u-appIcon disk'],['通讯录','u-appIcon address'],['通话记录','u-appIcon record'],['短信','u-appIcon msg'],['文章','u-appIcon article'],['记事本','u-appIcon nodepad'],['手机找回','u-appIcon findBack'],['云直播','u-appIcon live'],['企业版','u-appIcon enterprise']]
+                        li
+                            a(href="#")
+                                i(class=val[1])
+                                =val[0]
+            .g-main
+                //- .g-scrollWrap
+                .m-shareHead
+                    ul.shareSend.f-inlineBlock
+                        each val, indx in [['分享专辑','u-feedIcon album'],['分享图片','u-feedIcon pic'],['分享视频','u-feedIcon movie'],['分享文档','u-feedIcon file'],['分享音乐','u-feedIcon music'],['分享其他','u-feedIcon other']]
+                            li
+                                i(class=val[1])
+                                p= val[0]
+
+                        li.arrow
+                    ul.userInfo.f-inlineBlock
+                        li.icon
+                            a(href="#")
+                                img(src="img/usericon.jpg")
+                        each val in ['分享','专辑','订阅','粉丝']
+                            li
+                                p 1
+                                =val
+                    ul.shareNav
+                        each val, indx in ['全部','专辑','图片','视频','文档','音乐','其他']
+                            li
+                                if indx === 0
+                                    a.select(href="#")= val
+                                else
+                                    a(href="#")= val
+                .m-shareContent
+                    .contentPanel
+                        .recomand.piece
+                            .header
+                                i.heart
+                                |猜你喜欢
+                                a(href="#") 换一换
+                            - var n = 0;
+                            while n++ < 4
+                                .item
+                                    a.picWrap
+                                        img(src="img/rec.jpg").icon
+                                    div
+                                        h4.name 
+                                            a(href="#") 光与**勒布
+                                        a(href="#").subscribe
+                                            i
+                                            span 订阅
+                                    p.desc
+                                        |水彩素描交流群：278348331 ~资料来源网络
+
+                        ul.column1
+                            li.others.piece
+                                .hdWidthIcon
+                                    a(href="#")
+                                        i.u-fileIcon.fold
+                                        |导演10课
+                                .bdFileList
+                                    - var n = 0;
+                                    while n++<4
+                                        p
+                                            i.u-fileIcon.movie
+                                            |dir301-class10.avi
+                                    p.more
+                                        a.u-feedIcon.more(href="#")
+                                .footer
+                                    .lineOne.f-clear
+                                        a(href="#")
+                                            img(src="img/usericon.jpg", alt="")
+                                            span 字母花花
+                                        span.time 前天 07:06
+                                    .lineTwo.f-clear
+                                        .left
+                                            a(href="#")
+                                                i.u-feedIcon.thumb
+                                                |赞
+                                            a(href="#") 评论
+                                        .right
+                                            a(href="#") 取消分享
+                                            span 复制链接
+                                            a(href="#") 详情
+                            li.album.piece
+                                .hdWidthMsg.f-clear
+                                    a(href="#").icon
+                                        span.f-inlineBlock 共13个
+                                    .msg
+                                        a(href="#").tit BIM及文件
+                                        p.desc 本专辑更新了一个文件
+                                .bdFileList
+                                    - var n = 0;
+                                    while n++<4
+                                        p
+                                            i.u-fileIcon.movie
+                                            |dir301-class10.avi
+                                    p.more
+                                        a.u-feedIcon.more(href="#")
+                                .footer
+                                    .lineOne.f-clear
+                                        a(href="#")
+                                            img(src="img/usericon.jpg", alt="")
+                                            span 字母花花
+                                        span.time 前天 07:06
+                                    .lineTwo.f-clear
+                                        .left
+                                            a(href="#")
+                                                i.u-feedIcon.thumb
+                                                |赞(10)
+                                            a(href="#") 评论(1)
+                                        .right
+                                            a(href="#") 详情
+
+
+                        ul.column2
+                            li.piece.picture
+                                .hdNoIcon
+                                    a.tit 索林2.png
+                                .bdPic
+                                    i.u-holderIcon.music
+                                .footer
+                                    .lineOne.f-clear
+                                        a(href="#")
+                                            img(src="img/usericon.jpg", alt="")
+                                            span 字母花花
+                                        span.time 前天 07:06
+                                    .lineTwo.f-clear
+                                        .left
+                                            a(href="#")
+                                                i.u-feedIcon.thumb
+                                                |赞
+                                            a(href="#") 评论
+                                        .right
+                                            a(href="#") 保存
+                                            span 下载
+                                            a(href="#") 详情
+                    .paging
+    script(src='js/main.js')
+    //- script(src='js/index.js')
+

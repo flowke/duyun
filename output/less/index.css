@@ -1,0 +1,76 @@
+/* css reset */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+form,
+select {
+  margin: 0;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+em,
+i {
+  font-style: normal;
+}
+strong {
+  font-weight: normal;
+}
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0;
+}
+input {
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  margin: 0;
+  padding: 0;
+  resize: none;
+  overflow: auto;
+  outline: none;
+}
+body {
+  font: normal 14px Helvetica;
+  line-height: 1;
+}
+p {
+  line-height: 1.6667;
+}
+.f-clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.f-clear {
+  *zoom: 1;
+}
+/* end css reset */
+/* g-topBar */
+.g-topBar {
+  height: 49px;
+  background: #252525;
+}
+/* m-header */

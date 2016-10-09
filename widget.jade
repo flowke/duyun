@@ -1,0 +1,19 @@
+
+mixin skyDriver
+    .skyDriver 
+        a.item(href="#") 网盘
+        i.u-frameIcon.arrowDown
+        .dropDown
+            each val, indx in [['网盘','u-dropdownMenu disk'],['通讯录','u-dropdownMenu address'],['通话记录','u-dropdownMenu record'],['短信','u-dropdownMenu msg'],['文章','u-dropdownMenu article'],['记事本','u-dropdownMenu nodepad'],['手机找回','u-dropdownMenu findBack'],['云直播','u-dropdownMenu live'],['企业版','u-dropdownMenu enterprise']]
+                a(href="#")
+                    i(class=val[1])
+                    span= val[0]
+
+mixin mainNav
+    .m-nav
+        a.logo(src='#')
+        .list
+            a.item.active(href="#") 主页
+            +skyDriver
+            a.item(href="#") 分享
+            a.item(href="#") 应用
